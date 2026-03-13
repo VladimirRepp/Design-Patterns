@@ -18,7 +18,7 @@
 // Ñòàëî:
 void Player::SetWeapon(IWeaponStrategy* weaponStrategy)
 {
-	if (weaponStrategy)
+	if (this->weaponStrategy)
 		delete this->weaponStrategy;
 	
 	this->weaponStrategy = weaponStrategy;
@@ -33,6 +33,7 @@ void Player::Attack()
 		cout << "Warning! Weapon Strategy not set!" << endl;
 	}
 }
+
 
 
 
