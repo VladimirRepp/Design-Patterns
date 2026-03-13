@@ -5,6 +5,8 @@
 #include <iostream>
 using namespace std;
 
+// Полезная ссылка: https://refactoringu.ru/ru/design-patterns/strategy.html
+
 int main()
 {
 	Player p;
@@ -18,3 +20,4 @@ int main()
 
 	system("pause");
 }
+
