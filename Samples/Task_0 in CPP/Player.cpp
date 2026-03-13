@@ -1,10 +1,10 @@
 #include "Player.h"
 #include <iostream>
 
-// Было
+// ГЃГ»Г«Г®
 //void Player::Attack(string weapon_type)
 //{
-//	// Почему так плохо?
+//	// ГЏГ®Г·ГҐГ¬Гі ГІГ ГЄ ГЇГ«Г®ГµГ®?
 //	if (weapon_type == "Sword")
 //		cout << "Sword Attack!" << endl;
 //
@@ -15,9 +15,12 @@
 //		cout << "Bow Attack!" << endl;
 //}
 
-// Стало:
+// Г‘ГІГ Г«Г®:
 void Player::SetWeapon(IWeaponStrategy* weaponStrategy)
 {
+	if (weaponStrategy)
+		delete this->weaponStrategy;
+	
 	this->weaponStrategy = weaponStrategy;
 }
 
@@ -30,5 +33,6 @@ void Player::Attack()
 		cout << "Warning! Weapon Strategy not set!" << endl;
 	}
 }
+
 
 
