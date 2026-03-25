@@ -6,7 +6,10 @@ Player::~Player()
 }
 
 void Player::Update() {
-	m_currentState->Execute();
+	if (m_currentState)
+		m_currentState->Execute();
+	else
+		cout << "[Error.Player.Update]: State not set!";
 }
 
 void Player::SetState(State* new_state)
