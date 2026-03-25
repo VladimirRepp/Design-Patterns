@@ -6,7 +6,10 @@
 
         public void Update()
         {
-            _currentState.Execute();
+            if(_currentState != null)
+                _currentState.Execute();
+            else
+                Console.WriteLine("Player.Update.Error: State set null!");
         }
 
         public void SetState(State new_state)
