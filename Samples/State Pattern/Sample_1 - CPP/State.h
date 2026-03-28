@@ -18,6 +18,10 @@ public:
 	virtual void Exit() = 0;
 
 	virtual string GetName() { return m_name; }
-	virtual void SetEnemy(Enemy* new_enemy) { m_enemy = new_enemy; }
+	virtual void SetEnemy(Enemy* new_enemy) {
+		if(m_enemy)
+			delete m_enemy;
+		
+		m_enemy = new_enemy; }
 };
 
